@@ -117,7 +117,7 @@ public class Tree<T extends Comparable<T>> {
      * @param node the node
      * @return
      */
-    public int height(Node<T> node) {
+    private int height(Node<T> node) {
         if (node == null)
             return 0;
         if (node.rightNode == null && node.leftNode == null)
@@ -140,7 +140,7 @@ public class Tree<T extends Comparable<T>> {
      * @param node the node
      * @return 0 if the node is null, 1 if the node is a leaf or returns a recursive call if neither
      */
-    public int leaves(Node<T> node) {
+    private int leaves(Node<T> node) {
         if (node == null)
             return 0;
         if (node.leftNode == null && node.rightNode == null)
@@ -163,7 +163,7 @@ public class Tree<T extends Comparable<T>> {
      * @param node a node in the tree
      * @return the String representation for the values in the tree
      */
-    public String toString(StringBuilder str, Node<T> node) {
+    private String toString(StringBuilder str, Node<T> node) {
         if (node == null)
             return "[]";
         toString(str, node.rightNode);
